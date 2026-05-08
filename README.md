@@ -43,10 +43,11 @@ The Manufacturing Operations Portal is a modern, high-performance web applicatio
 
 ## Features
 
-- **Centralized Dashboard**: Quick access to all operational modules.
-- **Responsive Design**: Optimized for desktop and mobile devices.
-- **Modern UI/UX**: Clean aesthetic with high-quality components and animations.
-- **Performance Optimized**: Leveraging Next.js 16 features for fast loading and transitions.
+- **Centralized Hub**: Integrated access to **13+** industrial modules including Crane Maintenance, Production Monitoring, and Inventory Management.
+- **Breakdown Analysis**: New real-time tracking system for MTBF, MTTR, and plant availability metrics.
+- **Premium Aesthetics**: Modern UI featuring **mesh gradients**, corner glows, and a sophisticated dark theme for professional industrial use.
+- **Responsive Design**: Fully optimized for shop-floor mobile devices and control-room desktop displays.
+- **Performance Focused**: Leveraging Next.js 16 for near-instant transitions and high responsiveness.
 
 ## Project Structure
 
@@ -64,4 +65,4 @@ Designed & Developed by **Sundram Pandey**
 For support, inquiries, or customized features, please contact Uttam Innovative Solution Pvt. Ltd.
 
 ---
-*Version: 1.0.0 | Last Updated: May 2026*
+*Version: 1.1.0 | Last Updated: May 2026*

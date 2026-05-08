@@ -8,7 +8,12 @@ export function PortalHeader({ appCount }: PortalHeaderProps) {
   return (
     <header
       className="w-full"
-      style={{ background: "var(--header-bg)", color: "var(--header-fg)" }}
+      style={{
+        background: `radial-gradient(circle at 2% 2%, oklch(0.35 0.12 260 / 0.15), transparent 40%), 
+                     radial-gradient(circle at 98% 98%, oklch(0.35 0.12 240 / 0.1), transparent 40%), 
+                     var(--header-bg)`,
+        color: "var(--header-fg)",
+      }}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         {/* Top bar */}

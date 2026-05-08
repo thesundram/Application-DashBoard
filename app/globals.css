@@ -26,7 +26,7 @@
   --ring: oklch(0.52 0.18 240);
 
   /* Header / sidebar dark tokens */
-  --header-bg: oklch(0.17 0.025 240);
+  --header-bg: oklch(0.12 0.03 260);
   --header-fg: oklch(0.97 0 0);
   --header-muted: oklch(0.55 0.01 240);
 

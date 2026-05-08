@@ -1,6 +1,7 @@
 import { AppCard } from "@/components/app-card"
 import { PortalHeader } from "@/components/portal-header"
 import {
+  Activity,
   Wrench,
   Gauge,
   PackageSearch,
@@ -124,6 +125,15 @@ const applications = [
     accentColor: "bg-sky-500",
     iconBg: "bg-sky-50 text-sky-600",
   },
+  {
+    title: "Breakdown Analysis",
+    description:
+      "Monitor real-time breakdown metrics, track MTBF and MTTR, and analyze downtime patterns to improve plant equipment reliability.",
+    url: "https://plant-breakdown.vercel.app",
+    icon: Activity,
+    accentColor: "bg-red-600",
+    iconBg: "bg-red-50 text-red-600",
+  },
 ]
 
 export default function HomePage() {
@@ -153,16 +163,6 @@ export default function HomePage() {
           Click any application card to open it in a new tab &mdash; all links are live and secured.
         </p>
       </main>
-
-      <footer
-        className="w-full py-5 mt-4 border-t border-white/10"
-        style={{ background: "var(--header-bg)", color: "var(--header-muted)" }}
-      >
-        <div className="max-w-7xl mx-auto px-6 lg:px-10 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs">
-          <span>Manufacturing Operations Suite &mdash; Internal Portal</span>
-          <span>{new Date().getFullYear()} &copy; All rights reserved</span>
-        </div>
-      </footer>
     </div>
   )
 }
