@@ -1,6 +1,7 @@
 import { AppCard } from "@/components/app-card"
 import { PortalHeader } from "@/components/portal-header"
 import {
+  UserCheck,
   Activity,
   Wrench,
   Gauge,
@@ -133,6 +134,14 @@ const applications = [
     icon: Activity,
     accentColor: "bg-red-600",
     iconBg: "bg-red-50 text-red-600",
+  },
+  {
+    title: "Visitor Management",
+    description: "Streamline visitor registration, track real-time on-site presence, and manage entry/exit logs with automated check-in workflows.",
+    url: "https://visitor-new.vercel.app",
+    icon: UserCheck,
+    accentColor: "bg-purple-600",
+    iconBg: "bg-purple-50 text-purple-600",
   },
 ]
 

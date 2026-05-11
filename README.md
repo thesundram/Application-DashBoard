@@ -43,7 +43,7 @@ The Manufacturing Operations Portal is a modern, high-performance web applicatio
 
 ## Features
 
-- **Centralized Hub**: Integrated access to **13+** industrial modules including Crane Maintenance, Production Monitoring, and Inventory Management.
+- **Centralized Hub**: Integrated access to **14+** industrial modules including Crane Maintenance, Visitor Management, and Inventory Management.
 - **Breakdown Analysis**: New real-time tracking system for MTBF, MTTR, and plant availability metrics.
 - **Premium Aesthetics**: Modern UI featuring **mesh gradients**, corner glows, and a sophisticated dark theme for professional industrial use.
 - **Responsive Design**: Fully optimized for shop-floor mobile devices and control-room desktop displays.
