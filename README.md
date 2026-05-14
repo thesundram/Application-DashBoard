@@ -52,9 +52,9 @@ The Manufacturing Operations Portal is a modern, high-performance web applicatio
 ## Project Structure
 
 - `app/`: Next.js App Router components and layouts.
-- `components/`: Reusable UI components.
-- `hooks/`: Custom React hooks.
-- `lib/`: Utility functions and shared logic.
+- `components/`: Reusable UI components (including CategorySection).
+- `lib/data.ts`: Centralized data file for all application entries and categories.
+- `lib/utils.ts`: Utility functions and shared logic.
 - `styles/`: Global styles and CSS configurations.
 
 ## 👨‍💻 Author & Support
