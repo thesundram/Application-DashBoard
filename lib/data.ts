@@ -75,6 +75,14 @@ export const categories: Category[] = [
         accentColor: "bg-blue-600",
         iconBg: "bg-blue-50 text-blue-600",
       },
+      {
+        title: "MES - Steel Process",
+        description: "Integrated Manufacturing Execution System for steel processing, providing real-time production tracking and operational control.",
+        url: "http://65.1.231.36/login/",
+        icon: Activity,
+        accentColor: "bg-slate-700",
+        iconBg: "bg-slate-50 text-slate-700",
+      },
     ],
   },
   {
