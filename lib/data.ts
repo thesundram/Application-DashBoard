@@ -85,14 +85,13 @@ export const categories: Category[] = [
         iconBg: "bg-slate-50 text-slate-700",
       },
       {
-        title: "SteelSite MIS",
-        description: "Integrated Manufacturing Execution System for steel processing, providing real-time production tracking and operational control.",
-        url: "https://steel-site-mis.vercel.app",
+        title: "ERP System",
+        description: "ERP system for steel industry.",
+        url: "https://steel-erp-system.vercel.app",
         icon: Database,
         accentColor: "bg-green-500",
         iconBg: "bg-green-50 text-green-600",
       },
-
     ],
   },
   {
@@ -135,6 +134,14 @@ export const categories: Category[] = [
         accentColor: "bg-sky-500",
         iconBg: "bg-sky-50 text-sky-600",
       },
+      {
+        title: "SteelSite MIS",
+        description: "Integrated Manufacturing Execution System for steel processing, providing real-time production tracking and operational control.",
+        url: "https://steel-site-mis.vercel.app",
+        icon: Database,
+        accentColor: "bg-green-500",
+        iconBg: "bg-green-50 text-green-600",
+      },
     ],
   },
   {
@@ -163,14 +170,6 @@ export const categories: Category[] = [
         icon: Scale,
         accentColor: "bg-lime-500",
         iconBg: "bg-lime-50 text-lime-600",
-      },
-      {
-        title: "ERP System",
-        description: "ERP system for steel industry.",
-        url: "https://steel-erp-system.vercel.app",
-        icon: Database,
-        accentColor: "bg-green-500",
-        iconBg: "bg-green-50 text-green-600",
       },
     ],
   },
