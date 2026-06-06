@@ -85,9 +85,9 @@ export const categories: Category[] = [
         iconBg: "bg-slate-50 text-slate-700",
       },
       {
-        title: "ERP System",
-        description: "ERP system for steel industry.",
-        url: "https://steel-erp-system.vercel.app",
+        title: "ERP System OT",
+        description: "ERP system OT for steel industry.",
+        url: "https://steel-erp-ot.vercel.app",
         icon: Database,
         accentColor: "bg-green-500",
         iconBg: "bg-green-50 text-green-600",
