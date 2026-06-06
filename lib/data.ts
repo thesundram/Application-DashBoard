@@ -16,6 +16,9 @@ import {
   BarChart3,
   type LucideIcon,
   Database,
+  Building2,
+  Cpu,
+  Network,
 } from "lucide-react"
 
 export interface AppEntry {
@@ -86,12 +89,20 @@ export const categories: Category[] = [
       },
       {
         title: "ERP System OT",
-        description: "ERP system OT for steel industry.",
+        description: "Real-time Operational Technology (OT) system for steel manufacturing. Connects PLCs, SCADA, and sensors to monitor blast furnace, casting, and hot rolling telemetry.",
         url: "https://steel-erp-ot.vercel.app",
-        icon: Database,
-        accentColor: "bg-green-500",
-        iconBg: "bg-green-50 text-green-600",
+        icon: Cpu,
+        accentColor: "bg-orange-500",
+        iconBg: "bg-orange-50 text-orange-600",
       },
+      {
+        title: "ERP System IT",
+        description: "Enterprise Information Technology (IT) platform managing steel plant procurement workflows, sales orders, inventory ledgers, and database-driven quality logs.",
+        url: "https://steel-erp-it.vercel.app",
+        icon: Network,
+        accentColor: "bg-sky-500",
+        iconBg: "bg-sky-50 text-sky-600",
+      }
     ],
   },
   {
