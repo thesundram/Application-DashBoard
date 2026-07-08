@@ -19,6 +19,7 @@ import {
   Building2,
   Cpu,
   Network,
+  FileText,
 } from "lucide-react"
 
 export interface AppEntry {
@@ -202,6 +203,19 @@ export const categories: Category[] = [
         icon: UserCheck,
         accentColor: "bg-purple-600",
         iconBg: "bg-purple-50 text-purple-600",
+      },
+    ],
+  },
+  {
+    title: "AI & Document Intelligence",
+    apps: [
+      {
+        title: "Steel DocExtract",
+        description: "AI-powered document extraction and OCR system to process invoices, quality certificates, and logistics documents.",
+        url: "https://steel-docextract.vercel.app",
+        icon: FileText,
+        accentColor: "bg-teal-500",
+        iconBg: "bg-teal-50 text-teal-600",
       },
     ],
   },
