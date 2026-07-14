@@ -73,9 +73,9 @@ export const categories: Category[] = [
         iconBg: "bg-cyan-50 text-cyan-600",
       },
       {
-        title: "Mobil MES",
-        description: "Specialized Manufacturing Execution System for Mobil lubricant production, batch traceability, and quality control.",
-        url: "https://mobil-mes.vercel.app",
+        title: "MES - Steel Job Works",
+        description: "Specialized Manufacturing Execution System for Steel Job Works.",
+        url: "https://mes-steel-job-work.vercel.app/",
         icon: Factory,
         accentColor: "bg-blue-600",
         iconBg: "bg-blue-50 text-blue-600",
@@ -147,7 +147,7 @@ export const categories: Category[] = [
         iconBg: "bg-sky-50 text-sky-600",
       },
       {
-        title: "SteelSite MIS",
+        title: "SteelSite MIS (Proj.)",
         description: "Integrated Manufacturing Execution System for steel processing, providing real-time production tracking and operational control.",
         url: "https://steel-site-mis.vercel.app",
         icon: Database,
