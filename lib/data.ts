@@ -20,6 +20,7 @@ import {
   Cpu,
   Network,
   FileText,
+  MessagesSquare,
 } from "lucide-react"
 
 export interface AppEntry {
@@ -216,6 +217,14 @@ export const categories: Category[] = [
         icon: FileText,
         accentColor: "bg-teal-500",
         iconBg: "bg-teal-50 text-teal-600",
+      },
+      {
+        title: "Steel Orders Agent",
+        description: "AI Sales Order Entry Agent using browser voice-dictation, natural language query processing, and automated master lookup verification.",
+        url: "https://uttam-orders-agent.vercel.app/",
+        icon: MessagesSquare,
+        accentColor: "bg-blue-600",
+        iconBg: "bg-blue-50 text-blue-600",
       },
     ],
   },
