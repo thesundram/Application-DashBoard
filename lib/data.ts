@@ -76,7 +76,7 @@ export const categories: Category[] = [
       {
         title: "MES - Steel Job Works",
         description: "Specialized Manufacturing Execution System for Steel Job Works.",
-        url: "https://mes-steel-job-work.vercel.app/",
+        url: "http://65.1.231.36/new/login",
         icon: Factory,
         accentColor: "bg-blue-600",
         iconBg: "bg-blue-50 text-blue-600",
