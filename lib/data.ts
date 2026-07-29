@@ -113,7 +113,7 @@ export const categories: Category[] = [
       {
         title: "Crane Maintenance",
         description: "Manage crane inspection schedules, track maintenance work orders, and monitor equipment health.",
-        url: "https://crane-maintenance-new.vercel.app/",
+        url: "https://crane-maintenance-systems.vercel.app",
         icon: Wrench,
         accentColor: "bg-orange-500",
         iconBg: "bg-orange-50 text-orange-600",
@@ -148,7 +148,7 @@ export const categories: Category[] = [
         iconBg: "bg-sky-50 text-sky-600",
       },
       {
-        title: "SteelSite MIS (Proj.)",
+        title: "Green Field Project",
         description: "Integrated Manufacturing Execution System for steel processing, providing real-time production tracking and operational control.",
         url: "https://steel-site-mis.vercel.app",
         icon: Database,
