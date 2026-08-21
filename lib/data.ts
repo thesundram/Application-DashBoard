@@ -21,6 +21,7 @@ import {
   Network,
   FileText,
   MessagesSquare,
+  ShipWheel,
 } from "lucide-react"
 
 export interface AppEntry {
@@ -104,7 +105,15 @@ export const categories: Category[] = [
         icon: Network,
         accentColor: "bg-sky-500",
         iconBg: "bg-sky-50 text-sky-600",
-      }
+      },
+      {
+        title: "HarborWorks",
+        description: "Shipyard operations and manufacturing execution system managing vessel builds, multi-level BOMs, stock balances, and shop floor work orders.",
+        url: "https://harbors-work.vercel.app",
+        icon: ShipWheel,
+        accentColor: "bg-amber-500",
+        iconBg: "bg-amber-50 text-amber-600",
+      },
     ],
   },
   {
