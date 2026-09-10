@@ -106,14 +106,7 @@ export const categories: Category[] = [
         accentColor: "bg-sky-500",
         iconBg: "bg-sky-50 text-sky-600",
       },
-      {
-        title: "HarborWorks",
-        description: "Shipyard operations and manufacturing execution system managing vessel builds, multi-level BOMs, stock balances, and shop floor work orders.",
-        url: "https://harbors-work.vercel.app",
-        icon: ShipWheel,
-        accentColor: "bg-amber-500",
-        iconBg: "bg-amber-50 text-amber-600",
-      },
+      
       {
         title: "HarborWorks V6",
         description: "Shipyard operations and manufacturing execution system managing vessel builds, multi-level BOMs, stock balances, and shop floor work orders.",
