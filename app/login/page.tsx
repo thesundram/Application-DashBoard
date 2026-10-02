@@ -52,6 +52,11 @@ export default function LoginPage() {
         return;
       }
 
+      // Set tab-bound session so closing the tab immediately triggers auto-logout
+      if (typeof window !== "undefined") {
+        sessionStorage.setItem("uttam_active_session", "true");
+      }
+
       // Successful login - redirect to dashboard
       router.push("/");
       router.refresh();

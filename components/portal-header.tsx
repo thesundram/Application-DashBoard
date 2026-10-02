@@ -34,6 +34,9 @@ export function PortalHeader({ appCount }: PortalHeaderProps) {
   const handleLogout = async () => {
     setIsLoggingOut(true);
     try {
+      if (typeof window !== "undefined") {
+        sessionStorage.removeItem("uttam_active_session");
+      }
       await fetch("/api/auth/logout", { method: "POST" });
       router.push("/login");
       router.refresh();
