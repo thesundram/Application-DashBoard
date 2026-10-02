@@ -1,18 +1,22 @@
-import { AppCard } from "@/components/app-card"
-import { PortalHeader } from "@/components/portal-header"
-import { CategorySection } from "@/components/category-section"
-import { categories } from "@/lib/data"
+import { AppCard } from "@/components/app-card";
+import { PortalHeader } from "@/components/portal-header";
+import { CategorySection } from "@/components/category-section";
+import { categories } from "@/lib/data";
 
 export default function HomePage() {
-  const totalApps = categories.reduce((acc, cat) => acc + cat.apps.length, 0)
+  const totalApps = categories.reduce((acc, cat) => acc + cat.apps.length, 0);
 
   return (
-    <div className="min-h-screen flex flex-col bg-background">
+    <div className="min-h-screen flex flex-col bg-background selection:bg-primary/20 selection:text-primary">
       <PortalHeader appCount={totalApps} />
 
-      <main className="flex-1 max-w-7xl mx-auto w-full px-6 lg:px-10 py-10 flex flex-col gap-12">
+      <main className="flex-1 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-10 py-8 sm:py-10 flex flex-col gap-8 sm:gap-10">
         {categories.map((category) => (
-          <CategorySection key={category.title} title={category.title}>
+          <CategorySection
+            key={category.title}
+            title={category.title}
+            count={category.apps.length}
+          >
             {category.apps.map((app, idx) => (
               <AppCard
                 key={app.url}
@@ -29,10 +33,10 @@ export default function HomePage() {
         ))}
 
         {/* Footer note */}
-        <p className="mt-8 text-center text-xs text-muted-foreground italic">
+        <p className="mt-4 text-center text-xs text-muted-foreground/80 italic">
           Click any application card to open it in a new tab &mdash; all links are live and secured.
         </p>
       </main>
     </div>
-  )
+  );
 }
