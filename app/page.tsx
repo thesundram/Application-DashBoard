@@ -1,6 +1,7 @@
 import { AppCard } from "@/components/app-card";
 import { PortalHeader } from "@/components/portal-header";
 import { CategorySection } from "@/components/category-section";
+import { IdleTimer } from "@/components/idle-timer";
 import { categories } from "@/lib/data";
 
 export default function HomePage() {
@@ -8,6 +9,9 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen flex flex-col bg-background selection:bg-primary/20 selection:text-primary">
+      {/* Auto logout detector for inactivity or leaving the app */}
+      <IdleTimer />
+
       <PortalHeader appCount={totalApps} />
 
       <main className="flex-1 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-10 py-8 sm:py-10 flex flex-col gap-8 sm:gap-10">

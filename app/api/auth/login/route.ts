@@ -28,7 +28,7 @@ export async function POST(request: Request) {
       secure: process.env.NODE_ENV === "production",
       sameSite: "lax",
       path: "/",
-      maxAge: 60 * 60 * 24 * 7, // 7 days
+      // Omit maxAge so cookie automatically clears when browser/app session ends
     });
 
     return NextResponse.json({

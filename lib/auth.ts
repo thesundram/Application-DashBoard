@@ -108,7 +108,7 @@ export function validateCredentials(
  */
 export async function createSessionToken(
   user: AuthUser,
-  expiresInSeconds = 60 * 60 * 24 * 7 // 7 days
+  expiresInSeconds = 60 * 60 * 8 // 8 hours (standard shift)
 ): Promise<string> {
   const exp = Math.floor(Date.now() / 1000) + expiresInSeconds;
   const payload: SessionPayload = {
