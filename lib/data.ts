@@ -22,6 +22,7 @@ import {
   FileText,
   MessagesSquare,
   ShipWheel,
+  Sparkles,
 } from "lucide-react"
 
 export interface AppEntry {
@@ -235,6 +236,19 @@ export const categories: Category[] = [
         icon: MessagesSquare,
         accentColor: "bg-blue-600",
         iconBg: "bg-blue-50 text-blue-600",
+      },
+    ],
+  },
+  {
+    title: "Skin Analysis",
+    apps: [
+      {
+        title: "Skin Analysis",
+        description: "AI-powered facial skin health analysis evaluating clinical metrics with personalized care recommendations.",
+        url: "https://uttam-skin-analysis.vercel.app",
+        icon: Sparkles,
+        accentColor: "bg-teal-500",
+        iconBg: "bg-teal-50 text-teal-600",
       },
     ],
   },
