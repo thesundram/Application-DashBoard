@@ -107,7 +107,7 @@ export const categories: Category[] = [
         accentColor: "bg-sky-500",
         iconBg: "bg-sky-50 text-sky-600",
       },
-      
+
       {
         title: "HarborWorks V6",
         description: "Shipyard operations and manufacturing execution system managing vessel builds, multi-level BOMs, stock balances, and shop floor work orders.",
@@ -124,7 +124,7 @@ export const categories: Category[] = [
       {
         title: "Crane Maintenance",
         description: "Manage crane inspection schedules, track maintenance work orders, and monitor equipment health.",
-        url: "https://crane-maintenance-systems.vercel.app",
+        url: "http://65.1.231.36/maintenance",
         icon: Wrench,
         accentColor: "bg-orange-500",
         iconBg: "bg-orange-50 text-orange-600",
