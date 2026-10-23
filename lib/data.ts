@@ -122,7 +122,7 @@ export const categories: Category[] = [
         iconBg: "bg-pink-50 text-pink-600",
       },
       {
-        title: "CRS Optimizer G- OR",
+        title: "CRS Optimizer (G-OR)",
         description: "Advanced slitting optimization and material procurement planning to minimize scrap and maximize coil yield.",
         url: "https://slitter-optimization-frontend.vercel.app",
         icon: Scissors,
@@ -135,7 +135,7 @@ export const categories: Category[] = [
     title: "Maintenance Reliability Solutions",
     apps: [
       {
-        title: "Crane Maintenance",
+        title: "Crane Maintenance / Preventive Maintenance",
         description: "Manage crane inspection schedules, track maintenance work orders, and monitor equipment health.",
         url: "http://65.1.231.36/maintenance",
         icon: Wrench,
