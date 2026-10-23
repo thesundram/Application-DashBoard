@@ -44,22 +44,6 @@ export const categories: Category[] = [
     title: "Manufacturing Execution System (MES)",
     apps: [
       {
-        title: "CTL Optimizer",
-        description: "Optimize cut-to-length operations with intelligent scheduling, minimize material waste, and maximize yield.",
-        url: "https://ctl-optimizer.vercel.app/",
-        icon: SlidersHorizontal,
-        accentColor: "bg-violet-500",
-        iconBg: "bg-violet-50 text-violet-600",
-      },
-      {
-        title: "CRS Optimizer",
-        description: "Plan and optimize slitter configurations, manage coil recoiling schedules, and reduce setup time.",
-        url: "https://slitter-optimization.vercel.app/",
-        icon: Scissors,
-        accentColor: "bg-pink-500",
-        iconBg: "bg-pink-50 text-pink-600",
-      },
-      {
         title: "TubeMill",
         description: "Monitor real-time tube mill production metrics, shift targets, downtime events, and OEE performance.",
         url: "https://tube-mill-production-system.vercel.app/",
@@ -115,6 +99,35 @@ export const categories: Category[] = [
         icon: ShipWheel,
         accentColor: "bg-amber-500",
         iconBg: "bg-amber-50 text-amber-600",
+      },
+    ],
+  },
+  {
+    title: "Optimizers",
+    apps: [
+      {
+        title: "CTL Optimizer",
+        description: "Optimize cut-to-length operations with intelligent scheduling, minimize material waste, and maximize yield.",
+        url: "https://ctl-optimizer.vercel.app/",
+        icon: SlidersHorizontal,
+        accentColor: "bg-violet-500",
+        iconBg: "bg-violet-50 text-violet-600",
+      },
+      {
+        title: "CRS Optimizer",
+        description: "Plan and optimize slitter configurations, manage coil recoiling schedules, and reduce setup time.",
+        url: "https://slitter-aioptimizer.vercel.app",
+        icon: Scissors,
+        accentColor: "bg-pink-500",
+        iconBg: "bg-pink-50 text-pink-600",
+      },
+      {
+        title: "CRS Optimizer G- OR",
+        description: "Advanced slitting optimization and material procurement planning to minimize scrap and maximize coil yield.",
+        url: "https://slitter-optimization-frontend.vercel.app",
+        icon: Scissors,
+        accentColor: "bg-fuchsia-500",
+        iconBg: "bg-fuchsia-50 text-fuchsia-600",
       },
     ],
   },
