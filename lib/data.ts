@@ -23,6 +23,7 @@ import {
   MessagesSquare,
   ShipWheel,
   Sparkles,
+  RotateCw,
 } from "lucide-react"
 
 export interface AppEntry {
@@ -128,6 +129,14 @@ export const categories: Category[] = [
         icon: Scissors,
         accentColor: "bg-fuchsia-500",
         iconBg: "bg-fuchsia-50 text-fuchsia-600",
+      },
+      {
+        title: "Rolling Mill Optimizer",
+        description: "Optimize rolling mill production schedules, pass sequences, reduction parameters, and mill throughput.",
+        url: "http://65.1.231.36/mill",
+        icon: RotateCw,
+        accentColor: "bg-indigo-500",
+        iconBg: "bg-indigo-50 text-indigo-600",
       },
     ],
   },
