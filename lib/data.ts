@@ -144,7 +144,7 @@ export const categories: Category[] = [
     title: "Maintenance Reliability Solutions",
     apps: [
       {
-        title: "Crane Maintenance / Preventive Maintenance",
+        title: "Preventive Maintenance",
         description: "Manage crane inspection schedules, track maintenance work orders, and monitor equipment health.",
         url: "http://65.1.231.36/maintenance",
         icon: Wrench,
