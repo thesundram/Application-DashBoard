@@ -25,14 +25,29 @@ import {
   Sparkles,
   RotateCw,
 } from "lucide-react"
+import { appImpactMap, type AppImpact } from "./impact-data"
+
+export type { AppImpact }
+
+export function slugify(text: string): string {
+  return text
+    .toLowerCase()
+    .replace(/[^\w\s-]/g, "")
+    .trim()
+    .replace(/\s+/g, "-")
+    .replace(/-+/g, "-")
+}
 
 export interface AppEntry {
   title: string
+  slug?: string
   description: string
   url: string
   icon: LucideIcon
   accentColor: string
   iconBg: string
+  impact?: AppImpact
+  categoryTitle?: string
 }
 
 export interface Category {
@@ -40,7 +55,7 @@ export interface Category {
   apps: AppEntry[]
 }
 
-export const categories: Category[] = [
+const rawCategories: Category[] = [
   {
     title: "Manufacturing Execution System (MES)",
     apps: [
@@ -275,3 +290,21 @@ export const categories: Category[] = [
     ],
   },
 ]
+
+export const categories: Category[] = rawCategories.map((cat) => ({
+  ...cat,
+  apps: cat.apps.map((app) => ({
+    ...app,
+    slug: slugify(app.title),
+    categoryTitle: cat.title,
+    impact: appImpactMap[app.title],
+  })),
+}))
+
+export function getAllApps(): AppEntry[] {
+  return categories.flatMap((cat) => cat.apps)
+}
+
+export function getAppBySlug(slug: string): AppEntry | undefined {
+  return getAllApps().find((a) => a.slug === slug)
+}

@@ -16,9 +16,9 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://uttamgalvasolutions.vercel.app'),
-  title: 'Uttam Galva Innovative Solutions Pvt. Ltd. | Solutions Dashboard | Manufacturing Operations Portal',
-  description: 'Centralized launcher for all manufacturing and operations applications - Uttam Galva Innovative Solutions Pvt. Ltd.',
-  generator: 'Uttam Galva Innovative Solutions Pvt. Ltd.',
+  title: 'Uttam Galva Innovative Solutions | Solutions Dashboard | Manufacturing Operations Portal',
+  description: 'Centralized launcher for all manufacturing and operations applications - Uttam Galva Innovative Solutions',
+  generator: 'Uttam Galva Innovative Solutions',
   icons: {
     icon: [
       {
@@ -58,9 +58,7 @@ export default function RootLayout({
           {children}
         </div>
         {/* Footer */}
-        <div className="container mx-auto px-4 pb-4 mt-auto">
-          <Footer />
-        </div>
+        <Footer />
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>

@@ -1,45 +1,48 @@
-import { AppCard } from "@/components/app-card";
-import { PortalHeader } from "@/components/portal-header";
-import { CategorySection } from "@/components/category-section";
-import { IdleTimer } from "@/components/idle-timer";
-import { categories } from "@/lib/data";
+import Link from "next/link";
+import { Header } from "@/components/header";
+import { AboutUttamSection } from "@/components/about-uttam-section";
+import { ArrowRight, Boxes, Lock } from "lucide-react";
 
 export default function HomePage() {
-  const totalApps = categories.reduce((acc, cat) => acc + cat.apps.length, 0);
-
   return (
     <div className="min-h-screen flex flex-col bg-background selection:bg-primary/20 selection:text-primary">
-      {/* Auto logout detector for inactivity or leaving the app */}
-      <IdleTimer />
+      {/* Top Header */}
+      <Header />
 
-      <PortalHeader appCount={totalApps} />
+      <main className="flex-1 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-10 py-6 sm:py-10 space-y-10">
+        {/* Full About Uttam Galva Showcase */}
+        <AboutUttamSection />
 
-      <main className="flex-1 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-10 py-8 sm:py-10 flex flex-col gap-8 sm:gap-10">
-        {categories.map((category) => (
-          <CategorySection
-            key={category.title}
-            title={category.title}
-            count={category.apps.length}
-          >
-            {category.apps.map((app, idx) => (
-              <AppCard
-                key={app.url}
-                title={app.title}
-                description={app.description}
-                url={app.url}
-                icon={app.icon}
-                accentColor={app.accentColor}
-                iconBg={app.iconBg}
-                index={idx + 1}
-              />
-            ))}
-          </CategorySection>
-        ))}
+        {/* Access Applications Call-to-Action Bar */}
+        <section className="p-6 sm:p-8 rounded-3xl border border-primary/25 bg-gradient-to-r from-blue-950/40 via-card to-card shadow-xl flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="space-y-1 text-center md:text-left">
+            <h3 className="text-xl sm:text-2xl font-black text-foreground">
+              Explore 24 Production Applications &amp; Optimizers
+            </h3>
+            <p className="text-xs sm:text-sm text-muted-foreground">
+              Sign in to launch live shopfloor execution, cutting optimizers, and real-time telemetry.
+            </p>
+          </div>
 
-        {/* Footer note */}
-        <p className="mt-4 text-center text-xs text-muted-foreground/80 italic">
-          Click any application card to open it in a new tab &mdash; all links are live and secured.
-        </p>
+          <div className="flex flex-wrap items-center justify-center gap-3 shrink-0">
+            <Link
+              href="/apps"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl border border-border bg-card hover:bg-secondary text-xs font-bold text-foreground transition-all shadow-sm"
+            >
+              <Boxes className="w-4 h-4 text-primary" />
+              <span>Browse Applications</span>
+            </Link>
+
+            <Link
+              href="/login"
+              className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-primary hover:bg-primary/90 text-primary-foreground text-xs font-bold transition-all shadow-md shadow-primary/25"
+            >
+              <Lock className="w-4 h-4" />
+              <span>Portal Sign In</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </Link>
+          </div>
+        </section>
       </main>
     </div>
   );

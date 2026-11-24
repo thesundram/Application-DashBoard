@@ -11,18 +11,13 @@ export function IdleTimer() {
   const lastActivityRef = useRef<number>(Date.now());
 
   useEffect(() => {
-    // 1. Tab-Close / Fresh-Tab Detection:
-    // When a tab is closed, the browser permanently deletes its sessionStorage.
-    // If a user opens a new tab or re-opens after closing, sessionStorage is empty.
-    if (typeof window !== "undefined") {
-      const isTabSessionActive = sessionStorage.getItem("uttam_active_session");
-      if (!isTabSessionActive) {
-        // Tab was closed! Clear server session and redirect to login
-        fetch("/api/auth/logout", { method: "POST" }).finally(() => {
-          window.location.href = "/login";
-        });
-        return;
-      }
+    // Only monitor idle activity if user has logged in
+    if (typeof window === "undefined") return;
+
+    const isTabSessionActive = sessionStorage.getItem("uttam_active_session");
+    if (!isTabSessionActive) {
+      // Guest visitor: no need to trigger inactivity logout
+      return;
     }
 
     const updateActivity = () => {
@@ -38,7 +33,6 @@ export function IdleTimer() {
       } catch (err) {
         console.error("Auto logout failed:", err);
       } finally {
-        router.push("/login?reason=inactivity");
         router.refresh();
       }
     };
@@ -51,38 +45,26 @@ export function IdleTimer() {
       }
     };
 
-    // Check immediately when tab becomes visible again
     const handleVisibilityChange = () => {
       if (document.visibilityState === "visible") {
         checkInactivity();
       }
     };
 
-    // Interaction events to detect user presence
-    const events: (keyof WindowEventMap)[] = [
-      "mousedown",
-      "mousemove",
-      "keydown",
-      "scroll",
-      "touchstart",
-      "click",
-    ];
+    const intervalId = setInterval(checkInactivity, 30 * 1000);
 
+    const events = ["mousedown", "mousemove", "keydown", "scroll", "touchstart"];
     events.forEach((event) => {
       window.addEventListener(event, updateActivity, { passive: true });
     });
-
     document.addEventListener("visibilitychange", handleVisibilityChange);
 
-    // Periodically check inactivity every 15 seconds
-    const intervalId = setInterval(checkInactivity, 15000);
-
     return () => {
+      clearInterval(intervalId);
       events.forEach((event) => {
         window.removeEventListener(event, updateActivity);
       });
       document.removeEventListener("visibilitychange", handleVisibilityChange);
-      clearInterval(intervalId);
     };
   }, [router]);
 

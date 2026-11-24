@@ -60,9 +60,9 @@ The Manufacturing Operations Portal is a modern, high-performance web applicatio
 ## 👨‍💻 Author & Support
 
 Designed & Developed by **Sundram Pandey**  
-**Uttam Innovative Solution Pvt. Ltd.**
+**Uttam Galva Innovative Solutions**
 
-For support, inquiries, or customized features, please contact Uttam Innovative Solution Pvt. Ltd.
+For support, inquiries, or customized features, please contact Uttam Galva Innovative Solutions.
 
 ---
 *Version: 1.1.0 | Last Updated: May 2026*

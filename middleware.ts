@@ -18,20 +18,19 @@ export async function middleware(request: NextRequest) {
   const token = request.cookies.get(AUTH_COOKIE_NAME)?.value;
   const session = await verifySessionToken(token);
 
-  const isLoginPage = pathname === "/login";
+  // 1. If user is already logged in, visiting / (About page) or /login redirects straight to /apps
+  if (session && (pathname === "/" || pathname === "/login")) {
+    const appsUrl = new URL("/apps", request.url);
+    return NextResponse.redirect(appsUrl);
+  }
 
-  // If user is not logged in and not on /login, redirect to /login
-  if (!session && !isLoginPage) {
+  // 2. If user is NOT logged in and tries to access /apps or /apps/[slug], redirect to /login
+  if (!session && pathname.startsWith("/apps")) {
     const loginUrl = new URL("/login", request.url);
     return NextResponse.redirect(loginUrl);
   }
 
-  // If user is already logged in and attempts to visit /login, redirect to /
-  if (session && isLoginPage) {
-    const homeUrl = new URL("/", request.url);
-    return NextResponse.redirect(homeUrl);
-  }
-
+  // Public access to / (Home / About page) and /login
   return NextResponse.next();
 }
 
