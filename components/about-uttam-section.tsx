@@ -5,23 +5,17 @@ import Image from "next/image";
 import Link from "next/link";
 import {
   companyProfile,
-  aggregatePlantMetrics,
   digitalTransformationSavings,
   type TransformationSaving,
 } from "@/lib/impact-data";
 import {
-  Building2,
   Factory,
   Cpu,
   Layers,
-  Award,
   ArrowRight,
   ShieldCheck,
   Target,
   Sparkles,
-  TimerReset,
-  Scissors,
-  SlidersHorizontal,
   Boxes,
   CheckCircle2,
   Eye,
@@ -49,19 +43,6 @@ export function AboutUttamSection() {
       : digitalTransformationSavings.filter(
           (item) => item.category === selectedCategory
         );
-
-  const getMetricIcon = (iconName: string) => {
-    switch (iconName) {
-      case "TimerReset":
-        return <TimerReset className="w-5 h-5 text-rose-500" />;
-      case "Scissors":
-        return <Scissors className="w-5 h-5 text-emerald-500" />;
-      case "SlidersHorizontal":
-        return <SlidersHorizontal className="w-5 h-5 text-blue-500" />;
-      default:
-        return <ShieldCheck className="w-5 h-5 text-purple-500" />;
-    }
-  };
 
   const getPillarIcon = (index: number) => {
     switch (index) {
@@ -149,31 +130,6 @@ export function AboutUttamSection() {
             {companyProfile.overview}
           </p>
         </div>
-      </div>
-
-      {/* 4 Quantitative Plant Impact Highlights */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5 sm:gap-4">
-        {aggregatePlantMetrics.map((metric) => (
-          <div
-            key={metric.label}
-            className="p-5 rounded-2xl bg-card border border-border/80 shadow-sm flex flex-col justify-between hover:border-primary/40 transition-all group"
-          >
-            <div className="flex items-center justify-between">
-              <span className="text-[11px] font-bold text-muted-foreground uppercase tracking-wider">
-                {metric.label}
-              </span>
-              <div className="p-2 rounded-xl bg-secondary/80 group-hover:scale-110 transition-transform">
-                {getMetricIcon(metric.iconName)}
-              </div>
-            </div>
-            <div className="text-2xl sm:text-3xl font-black text-foreground mt-3 tracking-tight group-hover:text-primary transition-colors">
-              {metric.value}
-            </div>
-            <p className="text-xs text-muted-foreground mt-1.5 leading-snug">
-              {metric.subtext}
-            </p>
-          </div>
-        ))}
       </div>
 
       {/* 4 Core Pillars from Manager's Report (Digital Twin, Predictive Analytics, Computer Vision, Industrial Intelligence) */}
